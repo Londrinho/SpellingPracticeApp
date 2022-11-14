@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.jimmy.spellingapp.TitleFragment"
+        android:label="@string/home"
+        tools:layout="layout/fragment_title"
+
+        >
+        <action
+            android:id="@+id/action_titleFragment_to_slyFragment"
+            app:destination="@id/slyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/slyFragment"
+        android:name="com.jimmy.spellingapp.SlyFragment"
+        android:label="@string/spelling_practice"
+        tools:layout="@layout/fragment_sly"
+        />
+</navigation>
